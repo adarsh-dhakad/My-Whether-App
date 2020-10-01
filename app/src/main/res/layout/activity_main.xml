@@ -13,7 +13,7 @@
       android:id="@+id/humidityview"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="34dp"
+      android:layout_marginTop="50dp"
       android:text="humidity"
       android:textAlignment="center"
       android:textColor="#000000"
@@ -21,7 +21,7 @@
       android:textStyle="bold"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/edittext" />
 
   <TextView
       android:id="@+id/mycity"
@@ -81,7 +81,7 @@
       android:padding="24dp"
       android:background="#ffffff"
       android:hint="enter your city"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="@+id/guideline"/>
   <Button
@@ -91,9 +91,21 @@
       android:padding="24dp"
       android:text="Find Whether"
       android:background="#F66E06"
-      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintLeft_toLeftOf="@+id/guideline"
       app:layout_constraintRight_toRightOf="parent"/>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:id="@+id/textView2"
+      android:textSize="45dp"
+      android:padding="54dp"
+      android:textStyle="bold"
+      android:textColor="#ED0C07"
+   app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/day"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/guideline"
