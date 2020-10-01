@@ -2,9 +2,9 @@ package com.example.mywhetherappadarsh
 
 
 
-import android.app.PendingIntent.getActivity
+
 import android.content.Context
-import android.content.Intent
+
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
@@ -66,10 +66,11 @@ class MainActivity : AppCompatActivity() {
                 { response ->
                     try {
                         val json_mainobj = response.getJSONObject("main")
+                        val json_mainobj2 = response.getJSONObject("sys")
                         //    date.text = "Response: %s".format(response.toString())
                         var humidity = json_mainobj.getString("humidity")
                         val kelvinValue = json_mainobj.getDouble("temp")
-
+                        val country = json_mainobj2.getString("country")
                         val city = response.getString("name")
                         val Fahrenheit = (((kelvinValue - 273.15) * 9 / 5) + 32).toFloat()
                         val celsius = (kelvinValue - 273.15).toFloat()
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                         //  val ab=null //= celsius.toInt()
                         // day.text="$ab klk"
                         //   celsius.text = "$celsius 'C"
+                        countryview.text="$country"
                         celsiusview.text = "$celsius 'C"
                         fahrenheit.text = "$Fahrenheit'K"
                         val date = Date()
